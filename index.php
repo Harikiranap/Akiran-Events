@@ -98,14 +98,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 </head>
 <body>
 
-<!-- WhatsApp Chat Icon -->
-<a href="https://wa.me/919000000000" class="whatsapp-icon" target="_blank" aria-label="Chat on WhatsApp">
-  <i class="fab fa-whatsapp fa-2x"></i>
-</a>
 <!-- Go to Top Button -->
 <button id="goToTopBtn" title="Go to Top">&#8679;</button>
-
-
 
 <!-- Navigation Bar -->
 <nav class="navbar">
@@ -113,7 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     
     <a href="#about" class="logo"><img src="include/images/AE-bg.png" style="height: 70px; vertical-align: middle; margin-right: 8px;">Akiran<span style="color:#000000"> Events</span></a>
     <div class="nav-links">
-      <a href="#home" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About Us</a>
       <a href="#events" class="nav-link">Services</a>
       <a href="#contact" class="nav-link">Contact Us</a>
@@ -217,7 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                       Let us elevate your moments into unforgettable experiences.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event Team">
+                    <img src="include/images/about.jpeg" alt="Event Team">
                 </div>
             </div>
         </div>
@@ -237,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         <p>"Akiran made our wedding day absolutely perfect! They handled everything seamlessly and we didn't have to worry about a thing. I can't recommend Akiran enough!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="include/images/client.png" alt=" ">
+                        <img src="include/images/image22.jpg" alt=" ">
                         <h4>Bhavish</h4>
                         <p>Wedding Client</p>
                     </div>
@@ -247,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         <p>"The corporate retreat organized by Akiran was flawless. Our team had an amazing time and everything was perfectly executed."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="include/images/client.png" alt=" ">
+                        <img src="include/images/vamshi1.jpg" alt=" ">
                         <h4>Vamshi</h4>
                         <p>Corporate Client</p>
                     </div>
@@ -257,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         <p>"I can't recommend Akiran enough! They took care of every detail for my daughter's sweet sixteen and it was magical."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="include/images/client.png" alt="">
+                        <img src="include/images/img22.jpg" alt=" ">
                         <h4>Akshay</h4>
                         <p>Birthday Party Client</p>
                     </div>
@@ -265,9 +258,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             </div>
         </div>
     </section>
-
-
-
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
@@ -285,7 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
       <div class="contact-form">
         <h3>Send Us a Message</h3>
         <?php if (isset($_SESSION['email'])): ?>
-<form id="contactForm" method="POST">
+    <form id="contactForm" method="POST">
     <div class="form-group">
         <input type="text" name="name" placeholder="Your Name" required>
     </div>
@@ -317,10 +307,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
       <h3><span style=color:red;>Akiran</span> Events</h3>
       <p>Making your events unforgettable – with elegance, style, and precision.</p>
       <div class="social-icons" style="margin: 20px 0;">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <div class="footer-bottom">
         &copy; 2025 Akiran All rights reserved.

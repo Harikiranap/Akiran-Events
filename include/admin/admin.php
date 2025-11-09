@@ -145,6 +145,7 @@
             border: 1px solid #ddd;
             border-radius: var(--border-radius);
             font-size: 16px;
+            margin: 10px;
         }
 
         .btn {
@@ -159,6 +160,8 @@
         .btn-primary {
             background-color: var(--primary-color);
             color: white;
+            position: relative;
+            top: 10px;
         }
 
         .btn-secondary {

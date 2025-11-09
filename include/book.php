@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $from_date = $conn->real_escape_string($_POST['from_date'] ?? '');
     $to_date = $conn->real_escape_string($_POST['to_date'] ?? '');
     if (strtotime($from_date) > strtotime($to_date)) {
-    echo "<script>alert('From Date cannot be after To Date.');window.location.href = '../index.php'</script>";
+    echo "<script>alert('From Date cannot be after To Date.');</script>";
     exit;
 }
     if (!$email) {
@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $conn->real_escape_string($_POST['cust'] ?? '');
         $number = $conn->real_escape_string($_POST['number'] ?? '');
 
-        if (empty($event) || empty($from_date) || empty($to_date) || empty($hall) || empty($name) || empty($number)) {
+        if (!preg_match("/^[a-zA-Z\s]+$/", $name)) {
+            echo "<script>alert('Name must only contain letters and spaces.');</script>";
+        } elseif (empty($event) || empty($from_date) || empty($to_date) || empty($hall) || empty($name) || empty($number)) {
             echo "<script>alert('Please fill all required fields.');</script>";
         } else {
             $stmt = $conn->prepare("INSERT INTO bookings (event_name, frm_date, to_date, placeofhall, seats, name, number, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
@@ -196,7 +198,7 @@ $images = [
         }
 
         .booking-form button:hover {
-            background-color: #ffffffff;
+            background-color: #363535ff;
         }
 
         @media (max-width: 768px) {
@@ -228,7 +230,7 @@ $images = [
         .slider-container {
             position: relative;
             width: 100%;
-            height: 350px;
+            height: 450px;
             overflow: hidden;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -247,7 +249,7 @@ $images = [
         .slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: fill;
         }
 
         .slider-nav {
